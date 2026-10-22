@@ -53,12 +53,20 @@ separate standalone demo testbench; it is used by the integrated environment.
 
 The integrated environment is assembled from the clock/reset, YAPP, HBUS, and
 channel UVCs, the router reference-model/scoreboard environment, and the RTL
-DUT. Its testbench and register-model sources are in `top/tb/`.
+DUT. Its testbench, register-model sources, and Xcelium file list are in
+`top/tb/`.
 
-No top-level `run.f` is currently provided. Compile the sources using the
-file list and simulator setup appropriate for your Cadence/UVM installation;
-the package sources must be compiled before the integrated testbench that
-imports them.
+From the repository root, run the integrated testbench with:
+
+```sh
+cd top/tb
+xrun -f run.f
+```
+
+Set `UVMHOME` before starting the simulator. The file list selects
+`uvm_mem_walk_test` by default and enables the Xcelium GUI and coverage.
+Adjust those options in `top/tb/run.f` as needed for your simulator setup or a
+batch run.
 
 ## Generated files
 
