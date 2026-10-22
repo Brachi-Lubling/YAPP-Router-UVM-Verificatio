@@ -1,0 +1,21 @@
+# Cadence simulator output
+INCA_libs/
+xcelium.d/
+waves.shm/
+*.log
+*.history
+*.key
+*.shm/
+*.trn
+*.dsn
+*.vcd
+*.fsdb
+*.wlf
+*.ucdb
+*.vpd
+
+# Editor and backup files
+*~
+*.swp
+*.swo
+*.bak
